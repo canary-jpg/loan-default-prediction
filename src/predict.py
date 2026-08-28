@@ -21,7 +21,7 @@ def predict_one(features: dict, model_path:str = 'models/model.joblib') -> dict:
     columns, including UtilizationBucket as one of "low"/"medium"/"high"
     Use predict_from_raw() instead if you only have raw applicant field """
     model = get_model(model_path)
-    row = pd.DataFrame({col: features.get(col) for col in ALL_FEATURES})
+    row = pd.DataFrame([{col: features.get(col) for col in ALL_FEATURES}])
     proba = model.predict_proba(row)[0,1]
     return {"default_probability": float(proba), "predicted_class": int(proba >= 0.5)}
 

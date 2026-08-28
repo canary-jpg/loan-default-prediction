@@ -48,6 +48,8 @@ def engineer_features(raw:dict) -> dict:
 
     features = dict(raw)
     #missing value handing (mirrors notebook 02, section 1)
+    monthly_income = features.get("MonthlyIncome")
+    was_missing = monthly_income is None
     if was_missing:
         monthly_income = MONTHLY_INCOME_MEDIAN
     features['MonthlyIncome'] = monthly_income 
@@ -67,7 +69,7 @@ def engineer_features(raw:dict) -> dict:
     features['DebtRatio'] = min(features['DebtRatio'], DEBT_RATIO_CAP)
 
     #feature engineering (mirrors notebook 02, section 4)
-    features['TotalTimesLate'] = sum(features(c) for c in LATE_COLUMNS)
+    features["TotalTimesLate"] = sum(features[c] for c in LATE_COLUMNS)
     features['IncomePerDependent'] = monthly_income/(num_dependents + 1)
     features['HasRealEstateLoan'] = int(features['NumberRealEstateLoansOrLines'] > 0)
 
