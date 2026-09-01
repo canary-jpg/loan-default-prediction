@@ -1,9 +1,7 @@
 # Data & models (too large / regenerable — document how to get them instead)
 data/raw/*
 !data/raw/README.md
-data/processed/*
-!data/processed/.gitkeep
-models/*
+
 !models/.gitkeep
 
 # Python
