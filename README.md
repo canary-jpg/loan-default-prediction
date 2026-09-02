@@ -2,6 +2,9 @@
 
 Predicting the probability that a borrower will experience serious financial distress (90+ days delinquent) within the next two years, using the Kaggle ["Give Me Some Credit"](https://www.kaggle.com/c/GiveMeSomeCredit/data) dataset.
 
+**Live demo:** ["Live demo"](https://loan-default-dashboard-fkwz.onrender.com/)
+**API docs:** ["API docs"](https://loan-default-prediction-fn08.onrender.com/docs)
+
 ## Business framing
 
 Lenders lose money two ways: rejecting good borrowers (lost revenue) and approving borrowers who default (lost principal). A well-calibrated risk model lets a lender set a threshold that balances these costs instead of guessing. This project builds the model end-to-end and serves it as an API that could sit behind a loan application flow.
