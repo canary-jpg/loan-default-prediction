@@ -41,7 +41,7 @@ loan-default-prediction/
 -[X] Imbalance handling (class weights/SMOTE) + before/after metrics
 -[X] SHAP explainability
 -[X] FastAPI service
--[] Dockerized + deployed
+-[X] Dockerized + deployed
 -[X] Write-up
 
 ## Results
